@@ -5,7 +5,7 @@ export default function Navbar() {
   const navItems = getNavItems();
 
   return (
-    <header className="flex h-12 items-center border-b">
+    <header className="flex h-12 items-center border-b border-b-gray-100">
       <div className="mx-auto flex max-w-screen-md items-center">
         <nav>
           <ul className="flex gap-1">
