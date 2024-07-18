@@ -9,7 +9,7 @@ export default function PinnedProjects() {
   return (
     <section>
       <header>
-        <h2 className="mb-6 font-medium text-gray-900">Pinned Projects</h2>
+        <h2 className="mb-6 text-xl font-medium text-gray-900">Pinned Projects</h2>
       </header>
       <ul className="grid grid-cols-2 gap-4">
         {pinned.map((project) => {
@@ -23,8 +23,8 @@ export default function PinnedProjects() {
                 className="flex items-center gap-2 rounded-xl bg-gray-50 p-4"
               >
                 <header>
-                  <h2 className="mb-3 text-sm font-medium text-gray-900">{name}</h2>
-                  <p className="line-clamp-2 text-sm text-gray-600">{description}</p>
+                  <h2 className="mb-3 font-medium text-gray-900">{name}</h2>
+                  <p className="line-clamp-2 text-gray-600">{description}</p>
                 </header>
                 <span>
                   <ArrowIcon />

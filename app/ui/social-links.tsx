@@ -15,11 +15,11 @@ export default function SocialLinks() {
             <Link
               href={location}
               target="_blank"
-              className="flex items-center gap-2 rounded-md py-1 text-sm text-gray-600 hover:text-gray-900"
+              className="group flex items-center gap-2 rounded-md py-1 text-blue-600 hover:text-blue-400"
             >
               <span>{name}</span>
               <span>
-                <ArrowIcon />
+                <ArrowIcon className="text-blue-600 group-hover:text-blue-400" />
               </span>
             </Link>
           </li>
