@@ -4,7 +4,7 @@ export type Project = {
   description: string;
   location: string;
   repository: string;
-  tags: string[];
+  tags: { id: string; name: string }[];
   imageUrl: string;
   archived: boolean;
   pinned: boolean;

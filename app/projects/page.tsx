@@ -35,13 +35,13 @@ export default function Projects() {
                   <footer>
                     <ul className="mt-4 flex gap-3">
                       {project.tags.map((tag) => {
-                        const tagId = `tag-${id}`;
+                        const { id, name } = tag;
 
                         return (
-                          <li key={tagId}>
+                          <li key={id}>
                             <p className="">
                               <span className="block rounded-full bg-gray-50 px-3 py-1 text-sm">
-                                {tag}
+                                {name}
                               </span>
                             </p>
                           </li>
