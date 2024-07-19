@@ -1,7 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Fragment } from "react";
 import { getProjects } from "@/app/lib/data";
 import ArrowIcon from "@/app/ui/arrow-icon";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
 
 export default function Projects() {
   const projects = getProjects();

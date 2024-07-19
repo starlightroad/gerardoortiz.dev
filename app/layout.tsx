@@ -2,9 +2,13 @@ import type { Metadata } from "next";
 import inter from "@/app/ui/font";
 import "@/app/ui/globals.css";
 import Navbar from "@/app/ui/navbar";
+import { DEVELOPER } from "@/app/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Gerardo Ortiz",
+  title: {
+    template: `%s | ${DEVELOPER}`,
+    default: DEVELOPER,
+  },
   description: "Developer, computer wiz, and father of a green-cheeked conure.",
 };
 
