@@ -7,3 +7,13 @@
     text-wrap: balance;
   }
 }
+
+/* Hides the scrollbar on Chrome, Edge, and other WebKit-based browsers  */
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hides the scrollbar on Gecko-based browsers like Firefox */
+pre {
+  scrollbar-width: none;
+}
