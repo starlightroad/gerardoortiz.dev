@@ -26,7 +26,7 @@ export default async function Blog() {
             return (
               <article key={slug}>
                 <Link href={location} className="-mx-3 flex gap-4 rounded-xl p-3 hover:bg-gray-50">
-                  <p className="text-gray-600">{publicationDate}</p>
+                  <p className="hidden text-gray-600 sm:block">{publicationDate}</p>
                   <h2 className="font-medium text-gray-900">{metadata.title}</h2>
                 </Link>
               </article>

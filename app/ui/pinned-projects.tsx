@@ -11,7 +11,7 @@ export default function PinnedProjects() {
       <header>
         <h2 className="mb-6 text-xl font-medium text-gray-900">Pinned Projects</h2>
       </header>
-      <ul className="grid grid-cols-2 gap-4">
+      <ul className="grid gap-4 sm:grid-cols-2">
         {pinned.map((project) => {
           const { id, name, description, location } = project;
 

@@ -4,8 +4,8 @@ import RecentBlogs from "@/app/ui/recent-blogs";
 
 export default function Home() {
   return (
-    <div className="grid gap-12">
-      <section className="mt-12">
+    <div className="my-12 grid gap-12">
+      <section>
         <header>
           <h1 className="text-3xl font-medium text-gray-900">
             Self-Taught Developer Based in South Florida.

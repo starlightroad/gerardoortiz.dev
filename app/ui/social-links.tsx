@@ -6,7 +6,7 @@ export default function SocialLinks() {
   const socials = getSocials();
 
   return (
-    <ul className="mt-6 flex gap-4">
+    <ul className="mt-6 flex flex-col gap-4 sm:flex-row">
       {socials.map((social) => {
         const { id, name, location } = social;
 

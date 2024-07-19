@@ -38,13 +38,13 @@ export default function Projects() {
                   <h2 className="mb-3 text-xl font-medium text-gray-900">{project.name}</h2>
                   <p className="line-clamp-2 text-gray-600">{project.description}</p>
                   <footer>
-                    <ul className="mt-4 flex gap-3">
+                    <ul className="mt-4 flex flex-wrap gap-3">
                       {project.tags.map((tag) => {
                         const { id, name } = tag;
 
                         return (
                           <li key={id}>
-                            <p className="">
+                            <p>
                               <span className="block rounded-full bg-gray-50 px-3 py-1 text-sm">
                                 {name}
                               </span>
@@ -53,7 +53,7 @@ export default function Projects() {
                         );
                       })}
                     </ul>
-                    <p className="mt-6 flex text-gray-600">
+                    <p className="mt-6 flex flex-wrap text-gray-600">
                       See the&nbsp;
                       <Link
                         href={project.location}

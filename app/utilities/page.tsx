@@ -19,7 +19,7 @@ export default function Utilities() {
         </p>
       </header>
 
-      <ul className="grid grid-cols-2 gap-4">
+      <ul className="grid gap-4 sm:grid-cols-2">
         {utilities.map((utility) => {
           const { id, name, description, location } = utility;
 
@@ -27,7 +27,7 @@ export default function Utilities() {
             return (
               <li key={id}>
                 <div className="flex select-none items-center gap-2 rounded-xl bg-gray-50 p-4 hover:cursor-not-allowed">
-                  <header>
+                  <header className="w-full">
                     <h2 className="mb-3 font-medium text-gray-900">{name}</h2>
                     <p className="line-clamp-2 text-gray-600">{description}</p>
                   </header>
