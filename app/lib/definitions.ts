@@ -1,3 +1,9 @@
+export type BlogMetadata = {
+  title: string;
+  description: string;
+  publishedAt: string;
+};
+
 export type Project = {
   id: string;
   name: string;
