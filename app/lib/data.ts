@@ -1,5 +1,5 @@
 import type { Project } from "@/app/lib/definitions";
-import { navItems, projects, socials } from "@/app/lib/db";
+import { navItems, projects, socials, utilities } from "@/app/lib/db";
 import { getMDXData } from "@/app/lib/mdx";
 
 export const getProjects = (): Project[] => {
@@ -21,4 +21,8 @@ export const getNavItems = () => {
 export const getBlogPosts = async () => {
   const data = await getMDXData();
   return data;
+};
+
+export const getUtilities = () => {
+  return utilities;
 };
