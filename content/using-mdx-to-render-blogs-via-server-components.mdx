@@ -1,0 +1,156 @@
+---
+title: "Using MDX to Render Blogs via Server Components"
+publishedAt: "2024-07-19"
+summary: "Tutorial on how to use MDX via React server components."
+---
+
+I recently discovered how to use [MDX](https://mdxjs.com) via React server components in Next.js using the App Router. It allows you write markdown with JSX components. [Lee Robinson](https://leerob.io), VP of Product at [Vercel](https://vercel.com), wrote a great post about it titled [2023 Blog Refresh](https://leerob.io/blog/2023).
+
+## Installation
+
+To get started, install the package below via the command line. I am using NPM to install the package.
+
+```js
+npm i next-mdx-remote
+```
+
+## Implementation
+
+Create a folder outside of the app folder called content. This will be the local storage for our MDX files.
+
+If you are using Tailwind CSS, make sure to include the content folder inside the Tailwind CSS config file. This will allow you to use Tailwind CSS classes inside your markdown file!
+
+```tsx
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./content/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+    },
+  },
+  plugins: [],
+};
+export default config;
+```
+
+Copy, or use as a reference, the following code I used to get my blogs:
+
+```tsx
+import path from "node:path";
+import { readdir, readFile } from "node:fs/promises";
+import type { BlogMetadata } from "@/app/lib/definitions";
+
+export const getMDXFiles = async (dir: string) => {
+  return (await readdir(dir)).filter((file) => path.extname(file) === ".mdx");
+};
+
+export const readMDXFile = async (filePath: string) => {
+  const rawContent = await readFile(filePath, "utf-8");
+  return parseContent(rawContent);
+};
+
+const parseContent = (fileContent: string) => {
+  const regex = /---\s*([\s\S]*?)\s*---/;
+  const match = regex.exec(fileContent);
+  const block = match![1];
+  const content = fileContent.replace(regex, "").trim();
+  const lines = block.trim().split("\n");
+  const metadata: Partial<BlogMetadata> = {};
+
+  lines.forEach((line) => {
+    const [key, ...rest] = line.split(": ");
+    let value = rest.join(": ").trim();
+    value = value.replace(/^['"](.*)['"]$/, "$1");
+    metadata[key.trim() as keyof BlogMetadata] = value;
+  });
+
+  return { metadata: metadata as BlogMetadata, content };
+};
+
+export const getMDXData = async (dir: string = path.join(process.cwd(), "content")) => {
+  const mdxFiles = await getMDXFiles(dir);
+
+  return await Promise.all(
+    mdxFiles.map(async (file) => {
+      const { metadata, content } = await readMDXFile(path.join(dir, file));
+      const slug = path.basename(file, path.extname(file));
+      return { metadata, slug, content };
+    }),
+  );
+};
+```
+
+## Rendering
+
+To render a blog, you have to import MDXRemote into your desired component, fetch the blog data, and add the content to the source attribute of the MDXRemote component.
+
+```tsx
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { getBlogPosts } from "@/app/lib/data";
+
+type Props = {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata(props: Pick<Props, "params">): Promise<Metadata> {
+  const { params } = props;
+  const slug = params.slug;
+
+  const blogs = await getBlogPosts();
+  const blogPost = blogs.find((blogPost) => blogPost.slug === slug);
+
+  return {
+    title: blogPost?.metadata.title,
+    description: blogPost?.metadata.description,
+  };
+}
+
+export default async function Blog({ params }: Pick<Props, "params">) {
+  const blogPost = (await getBlogPosts()).find((blogPost) => blogPost.slug === params.slug);
+  const publicationDate = new Date(String(blogPost?.metadata.publishedAt));
+  const dateOptions: Intl.DateTimeFormatOptions = {
+    month: "long",
+    day: "2-digit",
+    year: "numeric",
+  };
+
+  if (!blogPost) {
+    notFound();
+  }
+
+  return (
+    <article className="my-12">
+      <header>
+        <h1 className="text-3xl font-medium text-gray-900">{blogPost.metadata.title}</h1>
+        <p className="mb-12 mt-6 text-gray-600">
+          <time dateTime={blogPost.metadata.publishedAt}>
+            Published {publicationDate.toLocaleDateString("en-us", dateOptions)}
+          </time>
+        </p>
+      </header>
+      <article>
+        <MDXRemote source={blogPost.content} />
+      </article>
+    </article>
+  );
+}
+```
+
+I am rendering the metadata dynamically using Next.js' [generateMetadata](https://nextjs.org/docs/app/api-reference/functions/generate-metadata) function. This allows the metadata such as the title and the description of the blog post to load. This is good for SEO.
+
+## Conclusion
+
+You should now be able to render MDX via React server components! There are other methods on rendering MDX, but I believe this method is a better approach for my use case.
