@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import { getBlogPosts } from "@/app/lib/data";
+import MDXComponent from "@/app/ui/mdx";
 
 type Props = {
   params: { slug: string };
@@ -45,7 +45,7 @@ export default async function Blog({ params }: Pick<Props, "params">) {
         </p>
       </header>
       <article>
-        <MDXRemote source={blogPost.content} />
+        <MDXComponent content={blogPost.content} />
       </article>
     </article>
   );
