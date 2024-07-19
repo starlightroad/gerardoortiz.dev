@@ -18,7 +18,7 @@ type Props = {
 
 export default function RootLayout({ children }: Readonly<Props>) {
   return (
-    <html lang="en">
+    <html lang="en" className="min-h-full">
       <body className={`${inter.className} antialiased`}>
         <Navbar />
         <main className="mx-auto max-w-3xl px-4">{children}</main>
