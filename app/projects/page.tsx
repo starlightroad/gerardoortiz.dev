@@ -14,8 +14,8 @@ export default function Projects() {
   return (
     <section className="my-12">
       <article>
-        <h1 className="text-3xl font-medium text-gray-900">My Projects</h1>
-        <p className="mb-12 mt-6 text-gray-600">
+        <h1 className="text-3xl font-medium text-gray-900 dark:text-white">My Projects</h1>
+        <p className="mb-12 mt-6 text-gray-600 dark:text-white dark:text-opacity-75">
           Some of my recent projects I have worked on. If you would like to see my older projects,
           you can visit the&nbsp;
           <Link
@@ -28,15 +28,19 @@ export default function Projects() {
           &nbsp;section at any time.
         </p>
         <div className="grid gap-12">
-          <hr className="border-gray-100" />
+          <hr className="border-gray-100 dark:border-white dark:border-opacity-10" />
           {projects.map((project, idx) => {
             const { id } = project;
 
             return (
               <Fragment key={id}>
                 <article>
-                  <h2 className="mb-3 text-xl font-medium text-gray-900">{project.name}</h2>
-                  <p className="line-clamp-2 text-gray-600">{project.description}</p>
+                  <h2 className="mb-3 text-xl font-medium text-gray-900 dark:text-white">
+                    {project.name}
+                  </h2>
+                  <p className="line-clamp-2 text-gray-600 dark:text-white dark:text-opacity-75">
+                    {project.description}
+                  </p>
                   <footer>
                     <ul className="mt-4 flex flex-wrap gap-3">
                       {project.tags.map((tag) => {
@@ -45,7 +49,7 @@ export default function Projects() {
                         return (
                           <li key={id}>
                             <p>
-                              <span className="block rounded-full bg-gray-50 px-3 py-1 text-sm">
+                              <span className="block rounded-full bg-gray-50 px-3 py-1 text-sm dark:bg-white dark:bg-opacity-[8%] dark:text-white">
                                 {name}
                               </span>
                             </p>
@@ -53,7 +57,7 @@ export default function Projects() {
                         );
                       })}
                     </ul>
-                    <p className="mt-6 flex flex-wrap text-gray-600">
+                    <p className="mt-6 flex flex-wrap text-gray-600 dark:text-white dark:text-opacity-75">
                       See the&nbsp;
                       <Link
                         href={project.location}
@@ -76,7 +80,9 @@ export default function Projects() {
                     </p>
                   </footer>
                 </article>
-                {idx !== projects.length - 1 && <hr className="border-gray-100" />}
+                {idx !== projects.length - 1 && (
+                  <hr className="border-gray-100 dark:border-white dark:border-opacity-10" />
+                )}
               </Fragment>
             );
           })}

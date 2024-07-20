@@ -13,8 +13,8 @@ export default function Utilities() {
   return (
     <section className="my-12">
       <header>
-        <h1 className="text-3xl font-medium text-gray-900">Useful Utilities</h1>
-        <p className="mb-12 mt-6 text-gray-600">
+        <h1 className="text-3xl font-medium text-gray-900 dark:text-white">Useful Utilities</h1>
+        <p className="mb-12 mt-6 text-gray-600 dark:text-white dark:text-opacity-75">
           Utilities I have built and use on a regular basis.
         </p>
       </header>
@@ -26,10 +26,12 @@ export default function Utilities() {
           if (!location) {
             return (
               <li key={id}>
-                <div className="flex select-none items-center gap-2 rounded-xl bg-gray-50 p-4 hover:cursor-not-allowed">
+                <div className="flex select-none items-center gap-2 rounded-xl bg-gray-50 p-4 hover:cursor-not-allowed dark:bg-white dark:bg-opacity-5">
                   <header className="w-full">
-                    <h2 className="mb-3 font-medium text-gray-900">{name}</h2>
-                    <p className="line-clamp-2 text-gray-600">{description}</p>
+                    <h2 className="mb-3 font-medium text-gray-900 dark:text-white">{name}</h2>
+                    <p className="line-clamp-2 text-gray-600 dark:text-white dark:text-opacity-75">
+                      {description}
+                    </p>
                   </header>
                   <span>
                     <ArrowIcon />
@@ -44,7 +46,7 @@ export default function Utilities() {
               <Link
                 href={location}
                 target="_blank"
-                className="flex items-center gap-2 rounded-xl bg-gray-50 p-4"
+                className="flex items-center gap-2 rounded-xl bg-gray-50 p-4 dark:bg-white dark:bg-opacity-5"
               >
                 <header>
                   <h2 className="mb-3 font-medium text-gray-900">{name}</h2>

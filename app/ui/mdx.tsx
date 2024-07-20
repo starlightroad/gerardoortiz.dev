@@ -12,7 +12,7 @@ const createHeading = (level: number) => {
   const Element = ({ children }: any) => {
     return createElement(
       `h${level}`,
-      { className: "my-3 text-xl font-medium text-gray-900" },
+      { className: "my-3 text-xl font-medium text-gray-900 dark:text-white" },
       children,
     );
   };
@@ -20,7 +20,7 @@ const createHeading = (level: number) => {
 };
 
 function CustomText(props: any) {
-  return <p className="py-3 text-gray-600" {...props} />;
+  return <p className="py-3 text-gray-600 dark:text-white dark:text-opacity-75" {...props} />;
 }
 
 function CustomLink(props: any) {
@@ -46,7 +46,7 @@ function CustomLink(props: any) {
 async function CustomCode(props: any) {
   const htmlCode = await codeToHtml(props.children, {
     lang: "typescript",
-    theme: "one-light",
+    theme: "material-theme-palenight",
     structure: "inline",
   });
   const newProps = { ...props };
@@ -64,7 +64,10 @@ async function CustomCode(props: any) {
 function CustomPre(props: any) {
   return (
     <div className="py-3">
-      <pre className="overflow-x-auto rounded-xl bg-gray-50 py-4" {...props} />
+      <pre
+        className="overflow-x-auto rounded-xl bg-slate-900 py-4 dark:bg-white dark:bg-opacity-5"
+        {...props}
+      />
     </div>
   );
 }

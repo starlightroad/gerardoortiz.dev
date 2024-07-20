@@ -12,7 +12,7 @@ export default async function Blog() {
   return (
     <section className="my-12">
       <article className="grid gap-4">
-        <h1 className="mb-2 text-3xl font-medium text-gray-900">Blog</h1>
+        <h1 className="mb-2 text-3xl font-medium text-gray-900 dark:text-white">Blog</h1>
         {blogs
           .sort((a, b) => {
             if (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)) return -1;
@@ -25,9 +25,14 @@ export default async function Blog() {
 
             return (
               <article key={slug}>
-                <Link href={location} className="-mx-3 flex gap-4 rounded-xl p-3 hover:bg-gray-50">
-                  <p className="hidden text-gray-600 sm:block">{publicationDate}</p>
-                  <h2 className="font-medium text-gray-900">{metadata.title}</h2>
+                <Link
+                  href={location}
+                  className="-mx-3 flex gap-4 rounded-xl p-3 hover:bg-gray-50 dark:hover:bg-white dark:hover:bg-opacity-5"
+                >
+                  <p className="hidden text-gray-600 sm:block dark:text-white dark:text-opacity-75">
+                    {publicationDate}
+                  </p>
+                  <h2 className="font-medium text-gray-900 dark:text-white">{metadata.title}</h2>
                 </Link>
               </article>
             );

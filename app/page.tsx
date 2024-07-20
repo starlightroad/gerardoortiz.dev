@@ -7,10 +7,10 @@ export default function Home() {
     <div className="my-12 grid gap-12">
       <section>
         <header>
-          <h1 className="text-3xl font-medium text-gray-900">
+          <h1 className="text-3xl font-medium text-gray-900 dark:text-white">
             Self-Taught Developer Based in South Florida
           </h1>
-          <p className="mt-6 text-gray-600">
+          <p className="mt-6 text-gray-600 dark:text-white dark:text-opacity-75">
             I build things for the web using React. I currently hold a position at a tech company
             within their network operations center where I am responsible for managing and ensuring
             the seamless operation of their network infrastructure.

@@ -42,8 +42,10 @@ export default async function Blog({ params }: Pick<Props, "params">) {
   return (
     <article className="my-12">
       <header>
-        <h1 className="text-3xl font-medium text-gray-900">{blogPost.metadata.title}</h1>
-        <p className="mb-12 mt-6 text-gray-600">
+        <h1 className="text-3xl font-medium text-gray-900 dark:text-white">
+          {blogPost.metadata.title}
+        </h1>
+        <p className="mb-12 mt-6 text-gray-600 dark:text-white dark:text-opacity-75">
           <time dateTime={publishedAt}>Published on {publicationDate}</time>
         </p>
       </header>
