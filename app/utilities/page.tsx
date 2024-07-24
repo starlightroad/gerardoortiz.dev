@@ -49,8 +49,10 @@ export default function Utilities() {
                 className="flex items-center gap-2 rounded-xl bg-gray-50 p-4 dark:bg-white dark:bg-opacity-5"
               >
                 <header>
-                  <h2 className="mb-3 font-medium text-gray-900">{name}</h2>
-                  <p className="line-clamp-2 text-gray-600">{description}</p>
+                  <h2 className="mb-3 font-medium text-gray-900 dark:text-white">{name}</h2>
+                  <p className="line-clamp-2 text-gray-600 dark:text-white dark:text-opacity-75">
+                    {description}
+                  </p>
                 </header>
                 <span>
                   <ArrowIcon />
