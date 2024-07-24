@@ -53,6 +53,40 @@ export const projects = [
     archived: false,
     pinned: true,
   },
+  {
+    id: "3bc06d43-8508-4ca9-b341-78bc779e2d18",
+    name: "devgerardoortiz.com",
+    description: "My portfolio website built with Vite.",
+    location: "https://devgerardoortiz.com",
+    repository: "https://github.com/starlightroad/gerardoortiz",
+    tags: [
+      { id: "f502edc4-7be8-4234-979e-0f304c1fa671", name: "Vite" },
+      { id: "273532d9-1a98-475a-9934-d9da1e1f82b5", name: "React" },
+      { id: "8325ab4d-2e66-460e-b15e-aca87083618c", name: "React Router" },
+      { id: "fbeeb935-0e4f-49d9-9b58-75b30c08d8ca", name: "Redux" },
+    ],
+    archived: true,
+    pinned: false,
+  },
+  {
+    id: "4aa054a3-48ca-4959-a72f-b4e9d9b998a1",
+    name: "University Finder",
+    description: "This project involves finding universities at a given location.",
+    location: "https://university-finder-us.cyclic.app/",
+    repository: "https://github.com/starlightroad/university-finder",
+    tags: [
+      { id: "c7ce7ccf-dcbc-4f18-a56a-ceac86bab1c5", name: "HTML" },
+      { id: "913dce5e-3da4-4964-acb7-1899c14c7abe", name: "CSS" },
+      { id: "7abe4eee-91c6-423a-beb0-43310885a59f", name: "JavaScript" },
+      { id: "a33475d5-8d29-4fa7-b0e1-c600145bc0ec", name: "Node.js" },
+      { id: "c97619da-21f6-4939-8abe-8782d1b660b8", name: "Express.js" },
+      { id: "3b0231da-e120-4237-b292-beccd67de3ca", name: "Mongoose" },
+      { id: "adbd4aa7-0e92-42c7-adef-5296e7cbfa50", name: "Mapbox API" },
+      { id: "f5f62afd-f5f7-438f-8731-a4d9803f82ed", name: "Yelp API" },
+    ],
+    archived: true,
+    pinned: false,
+  },
 ];
 
 export const socials: SocialLink[] = [
