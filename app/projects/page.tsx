@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default function Projects() {
-  const projects = getProjects();
+  const projects = getProjects().filter((project) => !project.archived);
 
   return (
     <section className="my-12">
