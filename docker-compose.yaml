@@ -1,0 +1,12 @@
+services:
+  app:
+    container_name: gerardoortiz_web
+    image: ghcr.io/starlightroad/gerardoortiz.dev
+    ports:
+      - 3000:3000
+    networks:
+      - main
+networks:
+  main:
+    name: vultr_network
+    external: true
