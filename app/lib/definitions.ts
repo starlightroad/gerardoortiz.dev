@@ -11,7 +11,7 @@ export type Project = {
   location: string;
   repository: string;
   tags: { id: string; name: string }[];
-  imageUrl: string;
+  imageUrl?: string;
   archived: boolean;
   pinned: boolean;
 };
