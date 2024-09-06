@@ -2,6 +2,24 @@ import type { Project, SocialLink, Utility } from "@/app/lib/definitions";
 
 export const projects: Project[] = [
   {
+    id: "1b81123b-ff2c-45ea-a4c9-cfd8cab381dc",
+    name: "NCMS",
+    description: "A management system that allows you to keep track of network circuits.",
+    location: "https://ncms.gerardoortiz.dev",
+    repository: "https://github.com/starlightroad/ncms",
+    tags: [
+      { id: "d85c1a7d-1dda-4b23-99b1-20d4d69192da", name: "Next.js" },
+      { id: "10173912-42b0-4a1a-b6ca-8c6c4583a5a8", name: "TypeScript" },
+      { id: "4c36d1b8-7cf4-4e73-92d3-21154ca4dd5e", name: "PostgreSQL" },
+      { id: "7edca8d6-432f-402c-b981-259bcbe0f2a5", name: "Prisma" },
+      { id: "298313e6-6e10-472a-8983-d7bca4508991", name: "Auth.js" },
+      { id: "52df5a21-2043-48d8-86c4-23e734600ad1", name: "Mapbox GL JS" },
+      { id: "e5b4d606-03cd-4a4e-bade-4aa9bb36e12d", name: "Docker" },
+    ],
+    archived: false,
+    pinned: true,
+  },
+  {
     id: "f0c852a2-a0ee-4afb-bbdb-cdbe1de4fe53",
     name: "Bookmarky",
     description: "Bookmark manager that allows you to store and organize your favorite websites.",
@@ -51,7 +69,7 @@ export const projects: Project[] = [
     ],
     imageUrl: "/img/nues-lg.jpg",
     archived: false,
-    pinned: true,
+    pinned: false,
   },
   {
     id: "3bc06d43-8508-4ca9-b341-78bc779e2d18",
