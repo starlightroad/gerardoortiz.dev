@@ -1,6 +1,6 @@
-import type { SocialLink, Utility } from "@/app/lib/definitions";
+import type { Project, SocialLink, Utility } from "@/app/lib/definitions";
 
-export const projects = [
+export const projects: Project[] = [
   {
     id: "f0c852a2-a0ee-4afb-bbdb-cdbe1de4fe53",
     name: "Bookmarky",
