@@ -41,7 +41,7 @@ export const projects: Project[] = [
     name: "Pokemon API",
     description: "API that contains data about Pokemon, moves, TMs, and HMs from generation I.",
     location: "https://pokemon-api.devgerardoortiz.com",
-    repository: "https://github.com/starlightroad/bookmarky",
+    repository: "https://github.com/starlightroad/pokemon-api",
     tags: [
       { id: "1aea6a90-d000-40e4-8ac9-1f2edf19df57", name: "React" },
       { id: "8bd4ffd7-cd2b-4af3-81f3-5cda59a99ffa", name: "React Router" },
