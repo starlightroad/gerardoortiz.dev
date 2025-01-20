@@ -116,7 +116,7 @@ export const socials: SocialLink[] = [
   {
     id: "bac909eb-f53f-4270-9add-1e346d2d1ba1",
     name: "Send email message",
-    location: "mailto:contact@devgerardoortiz.com",
+    location: "mailto:hello@gerardoortiz.dev",
   },
 ];
 
