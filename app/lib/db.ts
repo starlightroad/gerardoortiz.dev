@@ -2,6 +2,22 @@ import type { Project, SocialLink, Utility } from "@/app/lib/definitions";
 
 export const projects: Project[] = [
   {
+    id: "049551a3-9f5b-4c8c-91f6-94a6fda8d856",
+    name: "Toolbox",
+    description: "A collection of web-based utilities I have developed.",
+    location: "https://toolbox.gerardoortiz.dev",
+    repository: "https://github.com/starlightroad/toolbox",
+    tags: [
+      { id: "5a5744e1-36d7-4a1a-bb2c-7181b9136fc5", name: "Vite" },
+      { id: "8badf14f-fbf5-4346-a0a4-392d9538ec7b", name: "TypeScript" },
+      { id: "3069b702-c8b0-4b75-835b-9381ae091a1b", name: "Tailwind CSS" },
+      { id: "c84ce72d-6f50-4a4b-ab3e-8729618c05ce", name: "Docker" },
+      { id: "29717f9f-c503-4063-8183-f28d103a896a", name: "Nginx" },
+    ],
+    archived: false,
+    pinned: true,
+  },
+  {
     id: "1b81123b-ff2c-45ea-a4c9-cfd8cab381dc",
     name: "NCMS",
     description: "A management system that allows you to keep track of network circuits.",
@@ -23,7 +39,7 @@ export const projects: Project[] = [
     id: "f0c852a2-a0ee-4afb-bbdb-cdbe1de4fe53",
     name: "Bookmarky",
     description: "Bookmark manager that allows you to store and organize your favorite websites.",
-    location: "#",
+    location: "https://bookmarky-app.vercel.app",
     repository: "https://github.com/starlightroad/bookmarky",
     tags: [
       { id: "b5472422-25ba-4d23-8aaf-af8e73c2668b", name: "Next.js" },
@@ -51,8 +67,8 @@ export const projects: Project[] = [
       { id: "ef29ae50-f29f-4643-af4d-8d48d122a04a", name: "MongoDB" },
     ],
     imageUrl: "/img/projects/pokemon-api-lg.jpg",
-    archived: false,
-    pinned: true,
+    archived: true,
+    pinned: false,
   },
   {
     id: "57b66b26-a4b2-44bc-91dc-e78077556938",
@@ -68,7 +84,7 @@ export const projects: Project[] = [
       { id: "c069281d-9139-472b-93a3-f23391829f8f", name: "Newscatcher API" },
     ],
     imageUrl: "/img/nues-lg.jpg",
-    archived: false,
+    archived: true,
     pinned: false,
   },
   {
