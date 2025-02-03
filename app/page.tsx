@@ -8,12 +8,12 @@ export default function Home() {
       <section>
         <header>
           <h1 className="text-3xl font-medium text-gray-900 dark:text-white">
-            Self-Taught Developer Based in South Florida
+            Full-Stack Developer Building Scalable Web Apps with React and Docker
           </h1>
           <p className="mt-6 text-gray-600 dark:text-white dark:text-opacity-75">
-            I build things for the web using React. I currently hold a position at a tech company
-            within their network operations center where I am responsible for managing and ensuring
-            the seamless operation of their network infrastructure.
+            As a self-taught web developer, I focus on building modern applications using React,
+            Next.js, and Docker. I'm continuously learning and applying new skills through my
+            personal projects, focusing on performance, scalability, and user experience.
           </p>
         </header>
         <SocialLinks />
