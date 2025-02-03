@@ -161,13 +161,11 @@ export const utilities: Utility[] = [
     name: "Time Duration Calculator",
     description: "A time calculator that calculates how long something occurred between two times.",
     location: "https://toolbox.gerardoortiz.dev/time-duration-calculator",
-    repository: "",
   },
   {
     id: "ab8af1fd-3af8-446e-a809-75b31f15470c",
     name: "UUID Generator",
     description: "An online UUID generator that generates random IDs.",
     location: "https://toolbox.gerardoortiz.dev/random-id-generator",
-    repository: "",
   },
 ];
