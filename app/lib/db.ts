@@ -67,8 +67,8 @@ export const projects: Project[] = [
       { id: "ef29ae50-f29f-4643-af4d-8d48d122a04a", name: "MongoDB" },
     ],
     imageUrl: "/img/projects/pokemon-api-lg.jpg",
-    archived: false,
-    pinned: true,
+    archived: true,
+    pinned: false,
   },
   {
     id: "57b66b26-a4b2-44bc-91dc-e78077556938",
@@ -84,7 +84,7 @@ export const projects: Project[] = [
       { id: "c069281d-9139-472b-93a3-f23391829f8f", name: "Newscatcher API" },
     ],
     imageUrl: "/img/nues-lg.jpg",
-    archived: false,
+    archived: true,
     pinned: false,
   },
   {
