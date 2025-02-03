@@ -39,7 +39,7 @@ export const projects: Project[] = [
     id: "f0c852a2-a0ee-4afb-bbdb-cdbe1de4fe53",
     name: "Bookmarky",
     description: "Bookmark manager that allows you to store and organize your favorite websites.",
-    location: "#",
+    location: "https://bookmarky-app.vercel.app",
     repository: "https://github.com/starlightroad/bookmarky",
     tags: [
       { id: "b5472422-25ba-4d23-8aaf-af8e73c2668b", name: "Next.js" },
