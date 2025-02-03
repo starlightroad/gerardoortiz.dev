@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import SocialLinks from "@/app/ui/social-links";
 import PinnedProjects from "@/app/ui/pinned-projects";
 import RecentBlogs from "@/app/ui/recent-blogs";
+import { DEVELOPER } from "@/app/lib/constants";
+
+export const metadata: Metadata = {
+  title: `${DEVELOPER} - Building Web Apps with React and Docker`,
+};
 
 export default function Home() {
   return (
