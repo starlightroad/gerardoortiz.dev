@@ -167,7 +167,7 @@ export const utilities: Utility[] = [
     id: "ab8af1fd-3af8-446e-a809-75b31f15470c",
     name: "UUID Generator",
     description: "An online UUID generator that generates random IDs.",
-    location: "",
+    location: "https://toolbox.gerardoortiz.dev/random-id-generator",
     repository: "",
   },
 ];
