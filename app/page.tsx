@@ -18,7 +18,7 @@ export default function Home() {
           </h1>
           <p className="mt-6 text-gray-600 dark:text-white dark:text-opacity-75">
             As a self-taught web developer, I focus on building modern applications using React,
-            Next.js, and Docker. I'm continuously learning and applying new skills through my
+            Next.js, and Docker. I&apos;m continuously learning and applying new skills through my
             personal projects, focusing on performance, scalability, and user experience.
           </p>
         </header>
