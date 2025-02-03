@@ -159,15 +159,13 @@ export const utilities: Utility[] = [
   {
     id: "c0eb6780-6e08-4549-b17e-1a45a0bb9176",
     name: "Time Duration Calculator",
-    description: "A time calculator that calculates how long something occurred between two dates.",
-    location: "https://go-time-duration-calculator.netlify.app",
-    repository: "https://github.com/starlightroad/time-duration-calculator",
+    description: "A time calculator that calculates how long something occurred between two times.",
+    location: "https://toolbox.gerardoortiz.dev/time-duration-calculator",
   },
   {
     id: "ab8af1fd-3af8-446e-a809-75b31f15470c",
     name: "UUID Generator",
     description: "An online UUID generator that generates random IDs.",
-    location: "",
-    repository: "",
+    location: "https://toolbox.gerardoortiz.dev/random-id-generator",
   },
 ];

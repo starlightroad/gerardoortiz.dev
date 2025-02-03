@@ -22,4 +22,4 @@ export type SocialLink = {
   location: string;
 };
 
-export type Utility = Pick<Project, "id" | "name" | "description" | "location" | "repository">;
+export type Utility = Pick<Project, "id" | "name" | "description" | "location">;
