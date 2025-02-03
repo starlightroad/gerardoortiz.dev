@@ -2,6 +2,22 @@ import type { Project, SocialLink, Utility } from "@/app/lib/definitions";
 
 export const projects: Project[] = [
   {
+    id: "049551a3-9f5b-4c8c-91f6-94a6fda8d856",
+    name: "Toolbox",
+    description: "A collection of web-based utilities I have developed.",
+    location: "https://toolbox.gerardoortiz.dev",
+    repository: "https://github.com/starlightroad/toolbox",
+    tags: [
+      { id: "5a5744e1-36d7-4a1a-bb2c-7181b9136fc5", name: "Vite" },
+      { id: "8badf14f-fbf5-4346-a0a4-392d9538ec7b", name: "TypeScript" },
+      { id: "3069b702-c8b0-4b75-835b-9381ae091a1b", name: "Tailwind CSS" },
+      { id: "c84ce72d-6f50-4a4b-ab3e-8729618c05ce", name: "Docker" },
+      { id: "29717f9f-c503-4063-8183-f28d103a896a", name: "Nginx" },
+    ],
+    archived: false,
+    pinned: true,
+  },
+  {
     id: "1b81123b-ff2c-45ea-a4c9-cfd8cab381dc",
     name: "NCMS",
     description: "A management system that allows you to keep track of network circuits.",
