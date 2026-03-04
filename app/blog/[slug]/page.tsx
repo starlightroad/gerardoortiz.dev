@@ -4,12 +4,12 @@ import { getBlogPosts } from "@/app/lib/data";
 import MDXComponent from "@/app/ui/mdx";
 
 type Props = {
-  params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
 export async function generateMetadata(props: Pick<Props, "params">): Promise<Metadata> {
-  const { params } = props;
+  const params = await props.params;
   const slug = params.slug;
 
   const blogs = await getBlogPosts();
@@ -21,7 +21,8 @@ export async function generateMetadata(props: Pick<Props, "params">): Promise<Me
   };
 }
 
-export default async function Blog({ params }: Pick<Props, "params">) {
+export default async function Blog(props: Pick<Props, "params">) {
+  const params = await props.params;
   const blogPost = (await getBlogPosts()).find((blogPost) => blogPost.slug === params.slug);
   let publishedAt = blogPost?.metadata.publishedAt;
 
