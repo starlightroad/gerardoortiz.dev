@@ -5,6 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - ${PORT}:3000
+      - ${HOST_PORT}:3000
     environment:
       - HOSTNAME=${HOSTNAME}
+      - PORT=3000
