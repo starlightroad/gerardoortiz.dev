@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "app:prod:up": "docker compose --env-file=.env.local up --detach",
+    "app:prod:down": "docker compose --env-file=.env.local down"
   },
   "dependencies": {
     "next": "16.2.6",
