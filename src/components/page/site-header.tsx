@@ -2,9 +2,11 @@ import Link from "next/link";
 
 import Image from "next/image";
 
+import ThemeButton from "@/components/theme/theme-button";
+
 export default function SiteHeader() {
   return (
-    <header className="py-10">
+    <header className="flex items-center justify-between py-10">
       <nav>
         <p className="text-base font-medium">
           <Link href="/" className="inline-flex items-center gap-2">
@@ -13,6 +15,7 @@ export default function SiteHeader() {
           </Link>
         </p>
       </nav>
+      <ThemeButton />
     </header>
   );
 }
