@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import Image from "next/image";
+import SiteLogo from "@/components/page/site-logo";
 
 import ThemeButton from "@/components/theme/theme-button";
 
@@ -10,7 +10,7 @@ export default function SiteHeader() {
       <nav>
         <p className="text-base font-medium">
           <Link href="/" className="inline-flex items-center gap-2">
-            <Image src="logo-light.svg" width={20} height={20} alt="Gerardo Ortiz's site logo." />
+            <SiteLogo />
             Gerardo Ortiz
           </Link>
         </p>
