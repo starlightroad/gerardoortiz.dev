@@ -6,6 +6,8 @@ import "./globals.css";
 
 import SiteHeader from "@/components/page/site-header";
 
+import SiteNavigation from "@/components/page/site-navigation";
+
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
 });
@@ -22,6 +24,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" className={`${playfairDisplay.className} antialiased`}>
       <body className="mx-auto max-w-3xl px-5">
         <SiteHeader />
+        <SiteNavigation />
         {children}
       </body>
     </html>
