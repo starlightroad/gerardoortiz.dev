@@ -4,6 +4,8 @@ import { Playfair_Display } from "next/font/google";
 
 import "./globals.css";
 
+import { ThemeProvider } from "@wrksz/themes/next";
+
 import SiteHeader from "@/components/page/site-header";
 
 import SiteNavigation from "@/components/page/site-navigation";
@@ -21,11 +23,13 @@ type RootLayoutProps = Readonly<{ children: React.ReactNode }>;
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className={`${playfairDisplay.className} antialiased`}>
+    <html lang="en" className={`${playfairDisplay.className} antialiased`} suppressHydrationWarning>
       <body className="mx-auto max-w-3xl px-5">
-        <SiteHeader />
-        <SiteNavigation />
-        {children}
+        <ThemeProvider defaultTheme="system" disableTransitionOnChange>
+          <SiteHeader />
+          <SiteNavigation />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
