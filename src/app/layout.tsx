@@ -4,6 +4,8 @@ import { Playfair_Display } from "next/font/google";
 
 import "./globals.css";
 
+import SiteHeader from "@/components/page/site-header";
+
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
 });
@@ -17,11 +19,11 @@ type RootLayoutProps = Readonly<{ children: React.ReactNode }>;
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html
-      lang="en"
-      className={`${playfairDisplay.className} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${playfairDisplay.className} antialiased`}>
+      <body className="mx-auto max-w-3xl px-5">
+        <SiteHeader />
+        {children}
+      </body>
     </html>
   );
 }
