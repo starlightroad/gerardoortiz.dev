@@ -1,5 +1,6 @@
 export const DEVELOPER_PROFILE = {
   name: "Gerardo Ortiz",
+  title: "Network Operations Center (NOC) Technician",
   email: "hello@gerardoortiz.dev",
   github: "https://github.com/starlightroad",
   linkedin: "https://linkedin.com/in/gerardoortiz443",
