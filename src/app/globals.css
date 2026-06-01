@@ -4,10 +4,19 @@
 
 :root {
   --background: #ffffff;
+  --foreground: oklch(0 0 0);
+  --muted-foreground: oklch(0 0 0 0.88);
 }
 
 .dark {
   --background: #161616;
+  --foreground: oklch(1 0 0 / 0.8);
+  --muted-foreground: oklch(1 0 0 / 0.72);
+}
+
+@theme inline {
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
 }
 
 body {
