@@ -6,7 +6,7 @@ export default function SiteNavigation() {
   return (
     <header>
       <nav>
-        <ul className="flex items-center justify-center gap-5">
+        <ul className="flex items-center gap-5">
           {siteNavigationItems.map((siteNavigationItem) => {
             const { label, href } = siteNavigationItem;
 
