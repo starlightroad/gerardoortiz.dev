@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { DEVELOPER_PROFILE } from "@/lib/constants";
+
 import SiteLogo from "@/components/page/site-logo";
 
 import ThemeButton from "@/components/theme/theme-button";
@@ -11,7 +13,7 @@ export default function SiteHeader() {
         <p className="text-base font-medium">
           <Link href="/" className="text-foreground inline-flex items-center gap-2">
             <SiteLogo />
-            Gerardo Ortiz
+            {DEVELOPER_PROFILE.name}
           </Link>
         </p>
       </nav>
