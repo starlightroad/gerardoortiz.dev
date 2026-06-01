@@ -9,7 +9,7 @@ export default function SiteHeader() {
     <header className="flex items-center justify-between py-10">
       <nav>
         <p className="text-base font-medium">
-          <Link href="/" className="inline-flex items-center gap-2">
+          <Link href="/" className="text-foreground inline-flex items-center gap-2">
             <SiteLogo />
             Gerardo Ortiz
           </Link>

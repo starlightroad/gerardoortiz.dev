@@ -12,7 +12,7 @@ export default function SiteNavigation() {
 
             return (
               <li key={label.toLowerCase()}>
-                <Link href={href} className="text-base underline underline-offset-4">
+                <Link href={href} className="text-muted-foreground text-base underline underline-offset-4">
                   {label}
                 </Link>
               </li>
