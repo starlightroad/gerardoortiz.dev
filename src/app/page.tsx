@@ -2,26 +2,19 @@ import Link from "next/link";
 
 import type { Metadata } from "next";
 
+import { getFeaturedWork } from "@/data/work";
+
 import { createMailTo } from "@/lib/utils";
 
 import { DEVELOPER_PROFILE, SITE_METADATA } from "@/lib/constants";
-
-const workItems = [
-  {
-    label: "DeviceMGR",
-    href: "#",
-  },
-  {
-    label: "NCMS",
-    href: "#",
-  },
-];
 
 export const metadata: Metadata = {
   title: SITE_METADATA.home.title,
 };
 
 export default function HomePage() {
+  const featuredWorkItems = getFeaturedWork();
+
   return (
     <>
       <main>
@@ -40,12 +33,12 @@ export default function HomePage() {
         <p className="text-muted-foreground my-5">Some of my recent work:</p>
         <nav>
           <ul className="list-disc pl-5">
-            {workItems.map((workItem) => {
-              const { label, href } = workItem;
+            {featuredWorkItems.map((featuredWorkItem) => {
+              const { label, liveUrl } = featuredWorkItem;
 
               return (
                 <li key={label.toLowerCase()} className="text-muted-foreground">
-                  <Link href={href} className="text-base underline underline-offset-4">
+                  <Link href={liveUrl} className="text-base underline underline-offset-4">
                     {label}
                   </Link>
                 </li>
