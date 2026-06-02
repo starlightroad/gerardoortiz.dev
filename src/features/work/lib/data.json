@@ -1,0 +1,17 @@
+[
+  {
+    "id": "devicemgr",
+    "label": "DeviceMGR",
+    "description": "A centralized dashboard to manage, group, and track network assets.",
+    "features": [
+      "Designed a relational database to store and retrieve asset data.",
+      "Implemented a Download CSV utility to export devices for auditing and backups.",
+      "Built queries for server-side filtering and sorting of assets by name, type, status, group, serial number, and IP address."
+    ],
+    "liveUrl": "https://devicemgr.gerardoortiz.dev",
+    "repoUrl": "https://github.com/starlightroad/devicemgr",
+    "teckStack": ["Next.js", "React", "PostgreSQL", "Drizzle ORM", "Better Auth", "Base UI", "Tailwind CSS"],
+
+    "featured": true
+  }
+]
