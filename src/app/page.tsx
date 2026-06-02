@@ -1,8 +1,10 @@
 import Link from "next/link";
 
+import type { Metadata } from "next";
+
 import { createMailTo } from "@/lib/utils";
 
-import { DEVELOPER_PROFILE } from "@/lib/constants";
+import { DEVELOPER_PROFILE, SITE_METADATA } from "@/lib/constants";
 
 const workItems = [
   {
@@ -14,6 +16,10 @@ const workItems = [
     href: "#",
   },
 ];
+
+export const metadata: Metadata = {
+  title: SITE_METADATA.home.title,
+};
 
 export default function HomePage() {
   return (
