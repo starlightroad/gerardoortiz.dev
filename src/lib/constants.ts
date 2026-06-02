@@ -6,6 +6,13 @@ export const DEVELOPER_PROFILE = {
   linkedin: "https://linkedin.com/in/gerardoortiz443",
 };
 
+export const SITE_METADATA = {
+  home: {
+    title: `${DEVELOPER_PROFILE.name} - Crafting responsive web experiences`,
+    description: "A full-stack web developer crafting clean, type-safe web applications with React.",
+  },
+};
+
 export const siteNavigationItems = [
   {
     label: "Home",
