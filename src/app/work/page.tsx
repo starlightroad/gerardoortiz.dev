@@ -71,7 +71,7 @@ export default function WorkPage() {
           );
         })}
       </main>
-      <footer>
+      <footer className="pb-5">
         <p className="text-muted-foreground my-5">
           You can explore more of my work via&nbsp;
           <Link
