@@ -1,6 +1,15 @@
 import Link from "next/link";
 
+import type { Metadata } from "next";
+
 import { getTools } from "@/data/tool";
+
+import { SITE_METADATA } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  title: SITE_METADATA.tools.title,
+  description: SITE_METADATA.tools.description,
+};
 
 export default function ToolsPage() {
   const toolItems = getTools();

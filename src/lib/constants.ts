@@ -16,6 +16,11 @@ export const SITE_METADATA = {
     description:
       "Explore a collection of full-stack applications specializing in network asset management and infrastructure mapping built with Next.js and React.",
   },
+  tools: {
+    title: "Tools",
+    description:
+      "A list of web tools and utilities for developers and network professionals, featuring subnet calculators, regex testers, and specification guides.",
+  },
 };
 
 export const siteNavigationItems = [
