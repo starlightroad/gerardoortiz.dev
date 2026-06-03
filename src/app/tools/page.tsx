@@ -10,7 +10,7 @@ export default function ToolsPage() {
       <h1 className="text-foreground mt-10 text-2xl font-medium">Tools</h1>
       <p className="text-muted-foreground my-5">Useful tools from web that&apos;s worth sharing:</p>
       <nav>
-        <ul className="list-disc pl-5">
+        <ul className="list-disc space-y-1 pl-5">
           {toolItems.map((toolItem) => {
             const { id, label, href } = toolItem;
 

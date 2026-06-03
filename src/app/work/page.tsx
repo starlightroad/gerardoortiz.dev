@@ -52,7 +52,7 @@ export default function WorkPage() {
                 </ul>
               </nav>
               <p className="text-muted-foreground my-5">Features:</p>
-              <ul className="list-disc pl-5">
+              <ul className="list-disc space-y-1 pl-5">
                 {features.map((feature) => (
                   <li key={feature.toLowerCase()} className="text-muted-foreground">
                     {feature}
@@ -60,7 +60,7 @@ export default function WorkPage() {
                 ))}
               </ul>
               <p className="text-muted-foreground my-5">Tech stack:</p>
-              <ul className="list-disc pl-5">
+              <ul className="list-disc space-y-1 pl-5">
                 {teckStack.map((techStack) => (
                   <li key={techStack.toLowerCase()} className="text-muted-foreground">
                     {techStack}

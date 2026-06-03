@@ -32,7 +32,7 @@ export default function HomePage() {
         </p>
         <p className="text-muted-foreground my-5">Some of my recent work:</p>
         <nav>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc space-y-1 pl-5">
             {featuredWorkItems.map((featuredWorkItem) => {
               const { label, liveUrl } = featuredWorkItem;
 
