@@ -1,6 +1,13 @@
 import Link from "next/link";
 
-import { siteNavigationItems } from "@/lib/constants";
+import type { Metadata } from "next";
+
+import { SITE_METADATA, siteNavigationItems } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  title: SITE_METADATA.notFound.title,
+  description: SITE_METADATA.notFound.description,
+};
 
 export default function NotFoundPage() {
   const homePageLink = siteNavigationItems[0].href;

@@ -25,6 +25,10 @@ export const SITE_METADATA = {
     description:
       "A list of web tools and utilities for developers and network professionals, featuring subnet calculators, regex testers, and specification guides.",
   },
+  notFound: {
+    title: "Resource Not Found",
+    description: "The resource you are looking for does not exist or has been moved.",
+  },
 };
 
 export const siteNavigationItems = [
