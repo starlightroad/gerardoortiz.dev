@@ -11,7 +11,30 @@
     "liveUrl": "https://devicemgr.gerardoortiz.dev",
     "repoUrl": "https://github.com/starlightroad/devicemgr",
     "teckStack": ["Next.js", "React", "PostgreSQL", "Drizzle ORM", "Better Auth", "Base UI", "Tailwind CSS"],
-
+    "featured": true
+  },
+  {
+    "id": "ncms",
+    "label": "NCMS",
+    "description": "A network management system that tracks circuits, vendors, and PoP locations.",
+    "features": [
+      "Mapped physical network circuits and facility locations using Mapbox GL JS to provide real-time spatial context.",
+      "Developed dynamic charts using Recharts to track map load usage month-over-month and monitor circuit capacity thresholds (e.g., 10G and 100G).",
+      "Unified the tracking of network circuits, PoP locations, and vendor contacts by linking the infrastructure directly to specific geographic locations."
+    ],
+    "liveUrl": "https://ncms.gerardoortiz.dev/",
+    "repoUrl": "https://github.com/starlightroad/ncms",
+    "teckStack": [
+      "Next.js",
+      "React",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Auth.js",
+      "Shadcn UI",
+      "Tailwind CSS",
+      "Mapbox GL JS",
+      "Recharts"
+    ],
     "featured": true
   }
 ]
