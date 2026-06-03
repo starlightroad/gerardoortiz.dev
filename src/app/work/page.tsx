@@ -18,7 +18,7 @@ export default function WorkPage() {
           const headingAnchor = `#${id}`;
 
           return (
-            <article key={id}>
+            <article key={id} className="my-5">
               <Link href={headingAnchor} className="group inline-flex items-center gap-1 text-base">
                 <h2 id={id} className="text-foreground text-xl font-medium">
                   {label}
