@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gerardoortizdev_web
+    ports:
+      - ${PORT}:3000
+    environment:
+      - HOSTNAME=${HOSTNAME}
+      - PORT=${PORT}
