@@ -1,0 +1,37 @@
+[
+  {
+    "id": "regex101",
+    "label": "Regex101",
+    "href": "https://regex101.com/"
+  },
+  {
+    "id": "subnet-calculator",
+    "label": "Subnet Calculator",
+    "href": "https://www.vultr.com/resources/subnet-calculator/"
+  },
+  {
+    "id": "html5-specification",
+    "label": "HTML5 Specification",
+    "href": "https://html.spec.whatwg.org/multipage/"
+  },
+  {
+    "id": "markup-validation-service",
+    "label": "Markup Validation Service",
+    "href": "https://validator.w3.org/"
+  },
+  {
+    "id": "mac-address-converter",
+    "label": "MAC Address Converter",
+    "href": "https://www.vultr.com/resources/mac-converter/"
+  },
+  {
+    "id": "diffchecker",
+    "label": "Diffchecker",
+    "href": "https://www.diffchecker.com/"
+  },
+  {
+    "id": "random-uuid-generator",
+    "label": "Random UUID Generator",
+    "href": "https://toolbox.gerardoortiz.dev/random-id-generator"
+  }
+]
