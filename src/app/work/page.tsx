@@ -1,8 +1,15 @@
 import Link from "next/link";
 
+import type { Metadata } from "next";
+
 import { getWork } from "@/data/work";
 
-import { DEVELOPER_PROFILE } from "@/lib/constants";
+import { DEVELOPER_PROFILE, SITE_METADATA } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  title: SITE_METADATA.work.title,
+  description: SITE_METADATA.work.description,
+};
 
 export default function WorkPage() {
   const workItems = getWork();

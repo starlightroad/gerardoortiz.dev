@@ -11,6 +11,11 @@ export const SITE_METADATA = {
     title: `${DEVELOPER_PROFILE.name} - Crafting responsive web experiences`,
     description: "A full-stack web developer crafting clean, type-safe web applications with React.",
   },
+  work: {
+    title: "Work",
+    description:
+      "Explore a collection of full-stack applications specializing in network asset management and infrastructure mapping built with Next.js and React.",
+  },
 };
 
 export const siteNavigationItems = [
