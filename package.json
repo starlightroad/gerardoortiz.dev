@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "app:up": "docker compose --env-file .env.local up --detach",
+    "app:down": "docker compose --env-file .env.local down"
   },
   "dependencies": {
     "@wrksz/themes": "^0.9.3",
