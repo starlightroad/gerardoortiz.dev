@@ -16,6 +16,10 @@ export const SITE_METADATA = {
     description:
       "Explore a collection of full-stack applications specializing in network asset management and infrastructure mapping built with Next.js and React.",
   },
+  blog: {
+    title: "Blog",
+    description: "Articles and insights on web development. Content is on its way!",
+  },
   tools: {
     title: "Tools",
     description:
