@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import articlesJson from "@/features/article/lib/data.json";
 
+import { DEVELOPER_PROFILE } from "@/lib/constants";
+
 import type { ArticleItem } from "@/features/article/lib/definitions";
 
 export const getArticles = (): ArticleItem[] => articlesJson;
@@ -18,7 +20,7 @@ export const getArticleMetadataById = (articleId: string): Metadata => {
   return {
     title: metadata?.title,
     description: metadata?.description,
-    authors: [{ name: metadata?.author, url: "https://gerardoortiz.dev" }],
+    authors: [{ name: metadata?.author, url: DEVELOPER_PROFILE.url }],
     other: {
       "article:published": metadata?.publishedAt ?? "",
     },
