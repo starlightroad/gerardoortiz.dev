@@ -1,0 +1,9 @@
+[
+  {
+    "id": "using-mdx-to-render-blogs-via-server-components",
+    "title": "Using MDX to Render Blogs via Server Components",
+    "description": "Tutorial on how to use MDX via React server components.",
+    "author": "Gerardo Ortiz",
+    "publishedAt": "2024-07-19"
+  }
+]
