@@ -14,7 +14,7 @@ const components: MDXComponents = {
   ul: ({ children }) => <ul className="list-disc space-y-1 pl-5">{children}</ul>,
   li: ({ children }) => <li className="text-muted-foreground">{children}</li>,
   pre: ({ children, ...rest }) => (
-    <pre {...rest} className="overflow-auto rounded-md border border-black/10">
+    <pre {...rest} className="overflow-auto rounded-md border border-black/10 dark:border-white/10 dark:bg-white/1">
       {children}
     </pre>
   ),

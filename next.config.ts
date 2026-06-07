@@ -11,7 +11,10 @@ const nextConfig: NextConfig = {
 };
 
 const rehypeOptions: RehypeOptions = {
-  theme: "github-light",
+  theme: {
+    dark: "github-dark",
+    light: "github-light",
+  },
 };
 
 const withMdx = createMdx({
